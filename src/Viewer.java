@@ -1,12 +1,16 @@
+import java.util.List;
+
 public class Viewer {
     private String nickName;
     private int age;
     private int count;
+    private List<Cinema> cinemaList;
 
-    public Viewer(String nickName, int age, int count) {
+    public Viewer(String nickName, int age, List<Cinema> cinemaList) {
         this.nickName = nickName;
         this.age = age;
-        this.count = count;
+        this.cinemaList = cinemaList;
+        this.count = cinemaList.size();
     }
 
     public String getNickName() {
@@ -29,7 +33,11 @@ public class Viewer {
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setCinemaList(List<Cinema> cinemaList) {
+        this.cinemaList = cinemaList;
+    }
+
+    public List<Cinema> getCinemaList() {
+        return cinemaList;
     }
 }
